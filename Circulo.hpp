@@ -5,13 +5,13 @@ class Circulo{
                 float radio, diametro, circunferencia, area;
 		const float pi = 3.14159265359;
         public:
-                Circulo(float radio);
+                Circulo(float r);
 		void setDiametro();
 		void setCircunferencia();
                 float getRadio() const {return radio;};
                 float getDiametro() const {return diametro;};
                 float getCircunferencia() const {return circunferencia;};
 		float getArea();
-}
+};
 #endif
 

@@ -1,14 +1,14 @@
 #ifndef PIRAMIDE_H
 #define PIRAMIDE_H
-#include "Triangulo.h"
+#include "Triangulo.hpp"
+
 class Piramide{
         private: 
                 float altura, volumen;
 		Triangulo base;
-        private:
+        public:
                 Piramide(Triangulo t, float altura);
-                void setAltura();
-                float getAltura()const {return lado3;};
+                float getAltura()const {return altura;};
                 float getVolumen();
 }
 #endif

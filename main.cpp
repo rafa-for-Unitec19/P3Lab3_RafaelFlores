@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Triangulo.hpp"
+#include "Circulo.hpp"
 
 using  namespace std;
 
@@ -42,6 +43,14 @@ void crearTriangulo(){
 	cout << "La altura del Triangulo es: " << temp.getAltura() << endl;
 }
 
+void crearCirculo(){
+        float r = getNumbers(5);
+        Circulo temp (r);
+	cout << "EL Area del Circulo es: " << temp.getArea() << endl;
+        cout << "La Circunferencia del circulo es: " << temp.getCircunferencia() << endl;
+        cout << "El Diametro del Circulo es: " << temp.getDiametro() << endl;
+}
+
 int sucesion(int n){
 	if (n == 1){
 		return 1;
@@ -70,15 +79,15 @@ int menu(){
 		<< "\n\t2. Calcular el Area de un Triangulo"
 		<< "\n\t3. Calcular el area de un CIrculo"
 		<< "\n\t4. Calcular volumen de Piramide"
-		<< "\n\t5. Calcular volumen de Circulo" << endl;
+		<< "\n\t5. Calcular volumen de Circulo" 
+		<< "\n\t6. Salir"<< endl;
 	cin >> op;
 	return op;
 }
 
 int selector(){
-	int n;
-	//Triangulo t;
-	while(true){
+	bool flag = false;
+	while(!flag){
 		switch(menu()){
 			case 1:
 				cout << piramidal(getNumber()) << " <- Es el numero Triagular previo al ingresado" << endl;
@@ -87,8 +96,15 @@ int selector(){
 				crearTriangulo();
 				break;
 			case 3:
+				crearCirculo();
 				break;
 			case 4:
+				cout << "Hola";
+				break;
+			case 5:
+				break;
+			case 6:
+				flag = true;
 				break;
 			default:
 				cout << "La opcion es invalida!!!!" << endl;
