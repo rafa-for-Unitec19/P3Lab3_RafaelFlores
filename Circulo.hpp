@@ -4,13 +4,13 @@ class Circulo{
         private: 
                 float radio, diametro, circunferencia, area;
 		const float pi = 3.14159265359;
-        private:
-                Circulo(int l1, int l2, int l3);
+        public:
+                Circulo(float radio);
 		void setDiametro();
 		void setCircunferencia();
-                float getRadio() const {return lado2:};
-                float getDiametro() const {return lado3;};
-                float getCircunferencia() const {return lado3;};
+                float getRadio() const {return radio;};
+                float getDiametro() const {return diametro;};
+                float getCircunferencia() const {return circunferencia;};
 		float getArea();
 }
 #endif

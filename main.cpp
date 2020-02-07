@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Triangulo.hpp"
 
 using  namespace std;
 
@@ -19,11 +20,11 @@ int getNumber(){
 	return n;
 }
 
-float getNumbers(float key){
-	int lbl = (int)key, n;
+float getNumbers(int key){
+	float n;
 	while(true){
 		cin.get();
-		cout << "Ingrese el/la "<< label[lbl] << " del objeto" << endl;
+		cout << "Ingrese el/la "<< label[key] << " del objeto" << endl;
 		cin >> n;
 		if(n > 0){
 			return n;
@@ -31,6 +32,14 @@ float getNumbers(float key){
 			cout << "El numero es Invalido!!!\nDebe ser un numero positivo" << endl; 
 		}
 	}
+}
+
+void crearTriangulo(){
+	float l1 = getNumbers(0);
+	float l2 = getNumbers(1);
+	float l3 = getNumbers(2);
+	Triangulo temp (l1, l2, l3);
+	cout << "La altura del Triangulo es: " << temp.getAltura() << endl;
 }
 
 int sucesion(int n){
@@ -68,13 +77,14 @@ int menu(){
 
 int selector(){
 	int n;
+	//Triangulo t;
 	while(true){
 		switch(menu()){
 			case 1:
-				//n = getNumber();
 				cout << piramidal(getNumber()) << " <- Es el numero Triagular previo al ingresado" << endl;
 				break;
 			case 2:
+				crearTriangulo();
 				break;
 			case 3:
 				break;
