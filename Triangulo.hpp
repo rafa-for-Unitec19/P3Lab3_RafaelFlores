@@ -11,5 +11,6 @@ class Triangulo{
 		float getLado3()const {return lado3;};
 		float getAltura()const {return altura;};
 		float getArea();
+		float getVarArea()const{return area;};
 };
 #endif

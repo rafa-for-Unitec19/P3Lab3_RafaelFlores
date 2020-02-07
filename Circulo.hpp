@@ -12,6 +12,7 @@ class Circulo{
                 float getDiametro() const {return diametro;};
                 float getCircunferencia() const {return circunferencia;};
 		float getArea();
+		float getPi() const {return pi;};
 };
 #endif
 

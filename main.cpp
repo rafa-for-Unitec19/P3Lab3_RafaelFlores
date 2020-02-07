@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Triangulo.hpp"
 #include "Circulo.hpp"
+#include "Piramide.hpp"
+#include "Esfera.hpp"
 
 using  namespace std;
 
@@ -40,15 +42,35 @@ void crearTriangulo(){
 	float l2 = getNumbers(1);
 	float l3 = getNumbers(2);
 	Triangulo temp (l1, l2, l3);
+	cout << "El Area del Traingulo es: " << temp.getVarArea() << endl;
 	cout << "La altura del Triangulo es: " << temp.getAltura() << endl;
 }
 
 void crearCirculo(){
-        float r = getNumbers(5);
+        float r = getNumbers(4);
         Circulo temp (r);
 	cout << "EL Area del Circulo es: " << temp.getArea() << endl;
         cout << "La Circunferencia del circulo es: " << temp.getCircunferencia() << endl;
         cout << "El Diametro del Circulo es: " << temp.getDiametro() << endl;
+}
+
+
+void crearPiramide(){
+	cout << "Debe crear un triangulo: " << endl;
+	float l1 = getNumbers(0);
+	float l2 = getNumbers(1);
+	float l3 = getNumbers(2);
+        float alt = getNumbers(3);
+        Piramide temp (Triangulo(l1, l2, l3), alt);
+	cout << "EL Volumen de la Piramide es: " << temp.getVolumen() << endl;
+}
+
+void crearEsfera(){
+	cout << "Debe crear un circulo: " << endl;
+	float r = getNumbers(4);
+	Esfera temp (Circulo(r));
+	//Por alguna razonno reconoce a getVolumen como miebro de la clase esfera
+	//cout << "El Volumen de la Esfera es: " << temp.getVolumen() << endl;
 }
 
 int sucesion(int n){
@@ -99,9 +121,10 @@ int selector(){
 				crearCirculo();
 				break;
 			case 4:
-				cout << "Hola";
+				crearPiramide();
 				break;
 			case 5:
+				crearEsfera();
 				break;
 			case 6:
 				flag = true;

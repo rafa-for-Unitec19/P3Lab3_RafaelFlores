@@ -5,12 +5,10 @@
 using namespace std;
 
 float Piramide::getVolumen(){
-        area = ((base.getLado2() * 4) * altura)/3);
-        return area;
+        volumen = (pow((base.getLado2() * 4), 2) * altura)/3;
+        return volumen;
 }
 
-Piramide::Circulo(Tringulo r, float a): base(r), altura(a){
-        setDiametro();
-        setCircunferencia();
-}
+Piramide::Piramide(Triangulo r, float a): base(r), altura(a){}
+
 

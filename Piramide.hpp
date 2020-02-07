@@ -10,6 +10,6 @@ class Piramide{
                 Piramide(Triangulo t, float altura);
                 float getAltura()const {return altura;};
                 float getVolumen();
-}
+};
 #endif
 

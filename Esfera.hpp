@@ -1,14 +1,14 @@
 #ifndef ESFERA_H
 #define ESFERA_H
-#include "Circulo.h"
+#include "Circulo.hpp"
 class Esfera{
         private: 
                 Circulo circulo;
-        private:
+		float volumen;
+        public:
                 Esfera(Circulo c);
-                void setAltura();
-                float getRadio()const {return circulo.getRadio():};
+                float getRadio() const {return circulo.getRadio();};
                 float getVolumen();
-}
+};
 #endif
 
