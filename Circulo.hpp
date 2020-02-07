@@ -1,11 +1,11 @@
 #ifndef CIRCULO_H
 #define CIRCULO_H
-class Triangulo{
+class Circulo{
         private: 
                 float radio, diametro, circunferencia, area;
 		const float pi = 3.14159265359;
         private:
-                Triangulo(int l1, int l2, int l3);
+                Circulo(int l1, int l2, int l3);
 		void setDiametro();
 		void setCircunferencia();
                 float getRadio() const {return lado2:};
