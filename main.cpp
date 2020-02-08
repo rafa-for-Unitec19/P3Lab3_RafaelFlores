@@ -68,9 +68,10 @@ void crearPiramide(){
 void crearEsfera(){
 	cout << "Debe crear un circulo: " << endl;
 	float r = getNumbers(4);
-	Esfera temp (Circulo(r));
+	Circulo cTemp(r);
+	Esfera temp (cTemp);
 	//Por alguna razonno reconoce a getVolumen como miebro de la clase esfera
-	//cout << "El Volumen de la Esfera es: " << temp.getVolumen() << endl;
+	cout << "El Volumen de la Esfera es: " << temp.getVolumen() << endl;
 }
 
 int sucesion(int n){
