@@ -5,6 +5,7 @@ class Triangulo{
 		float lado1, lado2, lado3, altura, area;
 	public:
 		Triangulo(float l1, float l2, float l3);
+		~Triangulo();
 		void setAltura();
 		float getLado1()const {return lado1;};
 		float getLado2()const {return lado2;};

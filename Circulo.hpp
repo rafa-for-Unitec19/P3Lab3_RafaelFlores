@@ -6,6 +6,7 @@ class Circulo{
 		const float pi = 3.14159265359;
         public:
                 Circulo(float r);
+		~Circulo();
 		void setDiametro();
 		void setCircunferencia();
                 float getRadio() const {return radio;};

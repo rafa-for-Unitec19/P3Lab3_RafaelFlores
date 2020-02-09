@@ -8,6 +8,7 @@ class Piramide{
 		Triangulo base;
         public:
                 Piramide(Triangulo t, float altura);
+		~Piramide();
                 float getAltura()const {return altura;};
                 float getVolumen();
 };

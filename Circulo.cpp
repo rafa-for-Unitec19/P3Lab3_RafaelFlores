@@ -1,6 +1,8 @@
 #include "Circulo.hpp"
 #include <cmath>
 
+Circulo::~Circulo(){}
+
 float Circulo::getArea(){
         area = pi * pow(radio, 2);
         return area;

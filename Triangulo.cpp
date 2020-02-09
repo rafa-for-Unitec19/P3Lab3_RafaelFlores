@@ -1,6 +1,8 @@
 #include "Triangulo.hpp"
 #include <cmath>
 
+Triangulo::~Triangulo(){}
+
 float Triangulo::getArea(){
 	float s = (getLado1() + getLado2() + getLado3()) / 2;
 	area = sqrt(s * (s - getLado1()) * (s - getLado2()) * (s - getLado3()));
