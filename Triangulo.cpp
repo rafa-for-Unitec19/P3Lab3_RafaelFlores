@@ -1,13 +1,9 @@
 #include "Triangulo.hpp"
-#include <iostream>
 #include <cmath>
-
-using namespace std;
 
 float Triangulo::getArea(){
 	float s = (getLado1() + getLado2() + getLado3()) / 2;
 	area = sqrt(s * (s - getLado1()) * (s - getLado2()) * (s - getLado3()));
-	//cout << "EL area del triangulo es: " << area << endl;
 	return area;
 }
 

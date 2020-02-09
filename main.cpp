@@ -70,16 +70,11 @@ void crearEsfera(){
 	float r = getNumbers(4);
 	Circulo cTemp(r);
 	Esfera temp (cTemp);
-	//Por alguna razonno reconoce a getVolumen como miebro de la clase esfera
 	cout << "El Volumen de la Esfera es: " << temp.getVolumen() << endl;
 }
 
 int sucesion(int n){
-	if (n == 1){
-		return 1;
-	}else{
-		return n + sucesion(n-1);
-	}
+	return n == 1 ? 1 : n + sucesion(n-1);
 }
 
 int piramidal(int m){
@@ -102,13 +97,13 @@ int menu(){
 		<< "\n\t2. Calcular el Area de un Triangulo"
 		<< "\n\t3. Calcular el area de un CIrculo"
 		<< "\n\t4. Calcular volumen de Piramide"
-		<< "\n\t5. Calcular volumen de Circulo" 
+		<< "\n\t5. Calcular volumen de Cilindro" 
 		<< "\n\t6. Salir"<< endl;
 	cin >> op;
 	return op;
 }
 
-int selector(){
+void selector(){
 	bool flag = false;
 	while(!flag){
 		switch(menu()){
